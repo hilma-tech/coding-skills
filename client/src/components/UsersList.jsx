@@ -26,7 +26,7 @@ export default () => {
     });
 
     return (
-        <div style={{ marginTop: '7vh' }}>
+        <div>
             <input type="text" value={text} onChange={handleText} />
             <button type="button" onClick={handleSearch}>
                 Search
