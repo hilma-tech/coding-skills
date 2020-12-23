@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/copmy.scss'
 
 class Compi extends React.Component {
 

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import Square from './components/Square2.jsx';
+import UsersList from './components/UsersList.jsx';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/square' component={Square} />
+          <Route exact path='/users-list' component={UsersList} />
         </Switch>
       </Router>
     </div>

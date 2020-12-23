@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.App input {
+  background-color: green;
+}
 
 /* .sliderArrow{
   position: absolute;
