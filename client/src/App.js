@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import Square from './components/Square.jsx';

@@ -22,6 +22,15 @@ const Square = () => {
 
     return (
         <>
+            <div>{count === 0
+                ? 'לחצו על הריבוע האדום'
+                : 'לחצת '
+                + (count === 1 ? ' פעם אחת'
+                    : count === 2 ? ' פעמיים'
+                        : (count + ' פעמים'))}
+
+            </div>
+
             <div id='containSquares' >
                 <div className={'square ' + (currentSquare === 0 ? 'chosenSquare' : '')} onClick={() => {
                     if (currentSquare === 0) {
@@ -56,15 +65,8 @@ const Square = () => {
                     }
                 }}></div>
             </div>
-            <div>{count === 0
-                ? 'לחצו על ריבוע'
-                : 'לחצת '
-                + (count === 1 ? ' פעם אחת'
-                    : count === 2 ? ' פעמיים'
-                        : (count + ' פעמים'))}
 
-                {seconds}
-            </div>
+            <div> נשארו עוד {seconds} שניות </div>
         </>
     )
 }
