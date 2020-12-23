@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
-import Ride from './components/Ride';
+import Square from './components/Square2.jsx';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path='/ride' component={Ride} />
+          <Route exact path='/square' component={Square} />
         </Switch>
       </Router>
     </div>
