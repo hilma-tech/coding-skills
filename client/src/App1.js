@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Input from './components/SimpleInput'
 import { AsyncArr, AsyncArr2, ReverseArrayAndIncrease } from './common/ArrayFunctions';
+import { Rendi } from './components/Rendi';
 
 function App() {
   ReverseArrayAndIncrease([1, 2, 3, 4])
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Input></Input>
+      {/* <Rendi></Rendi> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
