@@ -1,0 +1,7 @@
+1. show NOT generic way (**settingsPage.jsx**)
+
+2. show generic way! (**SettingOption.jsx**)
+
+3. change **SettingsPage.jsx** to use Options:Array (from **genericWay.js**)
+
+4. (connect to what Reut said about .map() in render:) change **SettingsPage.jsx** to use **RenderSettingsOptions.jsx** (from **genericWay.js**)
