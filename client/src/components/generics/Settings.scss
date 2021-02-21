@@ -1,7 +1,8 @@
 //* just if want to run the code and see it with some style that makes sesne
 #admin-settings-container {
+    direction: rtl;
     div {
-        color: grey;
+        // color: grey;
     }
     .admin-settings-title {
         height: 8vh;
@@ -16,19 +17,23 @@
     }
 
     #admin-settings-white-box {
-        height: 64vh;
+        // height: 64vh;
         #settings-content-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: flex-start;
+            // justify-content: flex-start;
 
-            width: 70%;
-            height: 100%;
-            margin-right: 20%;
-            margin-left: 10%;
+            width: 80vw;
+            margin: auto;
+            // height: 100%;
+            // margin-right: 20%;
+            // margin-left: 10%;
 
+            
             .setting-container {
+                border: 1px solid #ffc06a;
+                padding: 20px 50px;
                 display: flex;
                 flex-direction: column;
                 margin-top: 10vh;
@@ -69,12 +74,11 @@
                     justify-content: space-between;
 
                     .setting-button {
-                        height: 6vh;
-                        line-height: 6vh;
+                        height: 2rem;
                         font-size: 3vh;
+                        padding: 10px;
                         border-radius: 6px;
                         cursor: pointer;
-                        width: 30%;
                         transition: background-color 200ms linear;
                         background-color: lightgrey;
                     }
@@ -89,6 +93,7 @@
                     }
                     .setting-text {
                         width: 65%;
+                        font-size: 1.4rem;
                     }
                 }
             }
