@@ -1,19 +1,32 @@
-import './App.css';
-import { Route, HashRouter as Router, Switch } from 'react-router-dom';
+
+import { Settings } from './components/Settings';
 import Square from './components/Square.jsx';
+import React, { useEffect } from 'react';
 import UsersList from './components/UsersList.jsx';
-import { SettingsList } from './components/generics/RenderSettings';
-import { createElement } from 'react';
+
+import { Rendi } from './components/Rendi';
+import Input from './components/SimpleInput';
+
+import './App.css';
+
+import { HashRouter as Router } from 'react-router-dom';
 
 function App() {
+
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route exact path='/square' component={Square} />
-          <Route exact path='/users-list' component={UsersList} />
-          <Route exact path='/settings' component={() => createElement(SettingsList, { isAdmin: true })} />
-        </Switch>
+
+        <Settings isAdmin={false} />
+
+        {/* <Rendi /> */}
+
+        {/* <Input /> */}
+
+        {/* <UsersList /> */}
+
+        {/* <Square /> */}
+
       </Router>
     </div>
   );

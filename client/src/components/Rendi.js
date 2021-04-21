@@ -10,10 +10,12 @@ export function Rendi() {
     useEffect(() => {
         setInterval(() => {
             console.log("interval", effected)
+            console.log("new interval", effected + 1)
             setEffected(effected + 1)
         }, 1000);
     }, [])
-    console.log("rendering function ", counter)
+    console.log(">> render");
+    console.log("counter: ", counter)
 
-    return <div>This component has been rendered too many times,{counter} affected {effected}</div>
+    return <div>This component has been rendered too many times: {counter} times, affected: {effected} times</div>
 }

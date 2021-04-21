@@ -2,29 +2,12 @@
   text-align: center;
   padding-top: 7vh;
 }
-.App input {
+
+input {
   background-color: green;
 }
 
-/* .sliderArrow{
-  position: absolute;
-  height: 100%;
-  top: 0;
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-  background-color: white;
-}
-
-.arrowLeft{
-  left: 0;
-}
-
-.arrowRight{
-  right: 0;
-} */
-
-#containSquares{
+#containSquares {
   width: 220px;
   height: 220px;
   display: flex;
@@ -32,7 +15,7 @@
   margin: auto;
 }
 
-.square{
+.square {
   width: 100px;
   height: 100px;
   margin: 5px;
@@ -41,15 +24,6 @@
   cursor: pointer;
 }
 
-.chosenSquare{
+.chosenSquare {
   background-color: red;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -23,7 +23,7 @@ class Compi extends React.Component {
     onChangeInput3 = (event) => {
         this.setState({ input3: event.target.value });
     }
-    
+
 
     render() {
         return (

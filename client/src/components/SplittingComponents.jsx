@@ -1,8 +1,8 @@
 import React from 'react';
 
-// without breaking up components
+// without breaking up components:
 
-const Parent = ({ name, list, updateItem }) => (
+export const Parent = ({ name, list, updateItem }) => (
 	<div>
 		<span>{name}</span>
 		<div>
@@ -14,24 +14,5 @@ const Parent = ({ name, list, updateItem }) => (
 				</div>
 			))}
 		</div>
-	</div>
-);
-
-// with breaking up components
-
-const Parent = ({ name, list, updateItem }) => (
-	<div>
-		<span>{name}</span>
-		<div>
-			{list.map(item => <Item key={item.id} buttonOnClick={updateItem} {...item} />)}
-		</div>
-	</div>
-);
-
-const Item = ({ name, id, buttonOnClick }) => (
-	<div>
-		<span>{id}</span>
-		<span>{name}</span>
-		<button onClick={() => buttonOnClick(id)}>remove</button>
 	</div>
 );
