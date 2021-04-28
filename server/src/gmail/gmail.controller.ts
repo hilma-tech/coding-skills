@@ -3,7 +3,7 @@ import { Response } from 'express';
 import { GmailService } from './gmail.service';
 @Controller('google')
 export class GmailController {
-    constructor(private readonly g_service: GmailService) { }
+    constructor(private readonly gService: GmailService) { }
 
 
     @Get('/1')
@@ -13,7 +13,7 @@ export class GmailController {
 
     @Get('ex')
     func(@Res() res: Response) {
-        this.g_service.functionnn(res);
+        this.gService.functionnn(res);
     }
 
     @Get('/postify')
