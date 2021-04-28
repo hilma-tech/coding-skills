@@ -5,6 +5,7 @@ import { ServeStaticModule } from '@nestjs/serve-static'
 import { join } from 'path';
 import { GmailController } from './gmail/gmail.controller';
 import { C404, GoogleController } from './google/google.controller';
+import { GmailService } from './gmail/gmail.service';
 @Module({
   imports: [ServeStaticModule.forRoot({ rootPath: join(__dirname, "../../client/build") })],
   controllers: [
@@ -13,6 +14,6 @@ import { C404, GoogleController } from './google/google.controller';
     GmailController,
     C404
   ],
-  providers: [AppService],
+  providers: [AppService, GmailService],
 })
 export class AppModule { }
