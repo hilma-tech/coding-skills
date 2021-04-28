@@ -42,8 +42,8 @@ const List = ({ list }) => {
     console.log('rendering List component....')
     return (
         <ul>
-            {sAB(list).map((item) => (
-                <ListItem key={item.id} item={item} />
+            {sAB(list).map((item, index) => (
+                <ListItem key={index} item={item} />
             ))}
         </ul>
     );
