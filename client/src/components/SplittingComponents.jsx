@@ -1,6 +1,5 @@
 import React from 'react';
 
-// without breaking up components:
 
 export const Parent = ({ name, list, updateItem }) => (
 	<div>
