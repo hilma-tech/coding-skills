@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-let interval = null
+let interval: null | number = null
 
 const Square = () => {
 
@@ -12,7 +12,7 @@ const Square = () => {
         interval = setInterval(() => {
             setSeconds(prevSeconds => {
                 if (prevSeconds === 0) {
-                    clearInterval(interval)
+                    interval && clearInterval(interval)
                     return 0
                 }
                 return prevSeconds - 1

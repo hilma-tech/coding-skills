@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 
 
 
@@ -6,27 +6,37 @@ import React from 'react';
 
 
 import './Settings.scss';
-import { resetFetch } from '../common/fakeFetches';
+import { resetFetch } from '../common/functions/fakeFetches';
+import { useSearchParams } from 'react-router-dom';
 
-export const Settings = ({ isAdmin }) => {
+
+
+
+const UserTypes = ["red", "blue", "green", "yellow", "OTHER", "אחר"];
+
+
+export const Settings: FC = () => {
+
+    const searchParams = useSearchParams()[0];
+    const isAdmin = searchParams.get("isAdmin") === "t";
+    console.log('isAdmin: ', isAdmin);
+
+    const [userType, setUserType] = useState("");
 
     const handleLogout = () => console.log(`history.push(window.location.pathname)`)
 
-    const hanleLanguage = async () => {
-        let msg = await resetFetch();
-        console.log("msg: ", msg);
-    }
-
-    const handleClick = () => {
+    const hanleClick = () => {
         console.log("new category")
     }
 
-    const handleEditUser = () => {
-        console.log("edit user info")
-        console.log("d")
-        console.log("o")
-        console.log("n")
-        console.log("e")
+    const handleUpdateUserType = () => {
+        const newUser = UserTypes[Math.floor(Math.random() * UserTypes.length)];
+        console.log('newUser: ', newUser);
+        if (newUser === "red") setUserType("חבר בגריפינדור🦁")
+        if (newUser === "blue") setUserType("חבר ברייבנקלו🦅");
+        if (newUser === "green") setUserType("חבר בסלית'רין🐍");
+        if (newUser === "yellow") setUserType("חבר בהפלפאף🦡")
+        setUserType("מוגלגים... 😞")
     }
 
     const handleResetPWClick = () => {
@@ -57,19 +67,19 @@ export const Settings = ({ isAdmin }) => {
                             </div>
 
                             <div className="setting-content">
-                                <div onClick={(e) => handleClick} className="setting-button" >הוסף קטגוריה</div>
+                                <div onClick={(e) => hanleClick} className="setting-button" >הוסף קטגוריה</div>
                                 <div className="setting-text" >הוספת קטגוריה שתופיע לכל המורים הרשומים לארגון שלך</div>
                             </div>
                         </div>
 
                         <div className="setting-container">
                             <div className="setting-title-container">
-                                <div className="setting-title">שינוי שפת ארגון</div>
+                                <div className="setting-title">סוג המשתמש שאני</div>
                             </div>
 
                             <div className="setting-content">
-                                <div onClick={hanleLanguage} className="setting-button" >שנה שפה</div>
-                                <div className="setting-text" >שימי לב כי שינוי השפה ישנה את שפת האתר עבור כל האירגון</div>
+                                <div onClick={handleUpdateUserType} className="setting-button" >שינוי</div>
+                                <div className="setting-text" >{userType || "no user type yet"}</div>
                             </div>
                         </div>
                     </>
