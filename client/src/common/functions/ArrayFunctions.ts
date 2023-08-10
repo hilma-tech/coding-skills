@@ -13,3 +13,20 @@ export async function AsyncArr(array: string[]) {
     })
     console.log("Done func 1.")
 }
+
+
+const sAB = (l: any) => {
+    let nl = [...l]
+    let t = {}
+
+    for (let i = 0; i < nl.length; i++) {
+        for (let j = i + 1; j < nl.length; j++) {
+            if (nl[i].name > nl[j].name) {
+                t = nl[i];
+                nl[i] = nl[j];
+                nl[j] = t;
+            }
+        }
+    }
+    return nl
+};
