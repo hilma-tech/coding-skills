@@ -3,7 +3,7 @@ import { Settings } from './components/Settings.js';
 import Square from './components/Square.jsx';
 
 import React, { useEffect } from 'react';
-import { Rendi } from './components/Rendi.js';
+import { GS } from './components/Guests.js';
 
 import './App.scss';
 import './common/style/class-names.scss'
@@ -22,7 +22,7 @@ function App() {
 
         <Settings />
 
-        {/* <Rendi /> */}
+        {/* <GS /> */}
 
         {/* <Square /> */}
 

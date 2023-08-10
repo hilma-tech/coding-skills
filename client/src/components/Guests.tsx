@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 
 
-export const Rendi: FC = () => {
+export const GS: FC = () => {
     const [guestsCount, setGuestsCount] = useState<number | null>(null);
     const [canDivideIntoPairs, setCanDivideIntoPairs] = useState(false);
 
