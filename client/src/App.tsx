@@ -20,11 +20,11 @@ function App() {
     <div className="app">
       <BrowserRouter>
 
-        {/* <Settings /> */}
+        <Settings />
 
         {/* <Rendi /> */}
 
-        <Square />
+        {/* <Square /> */}
 
         {/* <Avengers /> */}
 
