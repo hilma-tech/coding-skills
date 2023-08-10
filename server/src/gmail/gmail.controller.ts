@@ -13,7 +13,7 @@ export class GmailController {
 
     @Get('ex')
     func(@Res() res: Response) {
-        this.gService.functionnn(res);
+        return this.gService.functionnn(res);
     }
 
     @Get('/postify')
