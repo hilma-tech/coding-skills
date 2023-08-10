@@ -15,7 +15,7 @@ interface chapter {
     chapterName: string
 }
 
-export const LordOfTheRings = () => {
+export default function LordOfTheRings() {
     const [books, setBooks] = useState<Array<book>>([]);
     const [filteredBooks, setFilteredBooks] = useState<Array<book>>([]);
     const [openId, setOpenId] = useState("");

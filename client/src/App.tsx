@@ -10,7 +10,7 @@ import './common/style/class-names.scss'
 import { BrowserRouter } from 'react-router-dom';
 import { Avengers } from './components/avengers.js';
 import { DestructuringProps } from './components/DestructuringProps.js';
-import { LordOfTheRings } from './components/LordOfTheRings.js';
+import LordOfTheBracelets from './components/LordOfTheRings.js';
 import { Parent } from './components/SplittingComponents.js';
 
 
@@ -30,7 +30,7 @@ function App() {
 
         {/* <DestructuringProps /> */}
 
-        {/* <LordOfTheRings /> */}
+        {/* <LordOfTheBracelets /> */}
 
         {/* <Parent /> */}
 
