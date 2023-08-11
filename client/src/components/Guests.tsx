@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { FC, useEffect, useState } from 'react'
 
 
@@ -10,6 +11,8 @@ export const GS: FC = () => {
     }, [guestsCount]);
 
     const handleNewGuest = () => {
+        axios.post("/api/new-guest")
+        const partyInfo = axios.get("/api/party-info")
         setGuestsCount(curr => !curr ? 1 : curr + 1);
     }
 
