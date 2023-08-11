@@ -22,7 +22,7 @@ export const GS: FC = () => {
 
     return (
         <div>
-            <p>{!guestsCount || guestsCount <= 0 ? "No one is here yet..." : guestsCount === 1 ? `We have 1 guest!` : `We have ${guestsCount} guests!`}</p>
+            <p>{!guestsCount || guestsCount <= 0 ? "No one is here yet..." : guestsCount === 1 ? `We have 1 guest!` : "We have " + guestsCount + " guests!"}</p>
             <p className={divideIntoPairsDisplay.className}>{divideIntoPairsDisplay.text}</p>
             <button onClick={handleNewGuest}>knock knock</button>
         </div>

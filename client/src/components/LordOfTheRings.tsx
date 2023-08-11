@@ -35,7 +35,7 @@ export default function LordOfTheRings() {
     }
 
     const getChapters = async (id: string) => {
-        const { data } = await axios.get<{ docs: Array<Partial<chapter>>, total: number }>(`https://the-one-api.dev/v2/book/${id}/chapter`)
+        const { data } = await axios.get<{ docs: Array<Partial<chapter>>, total: number }>("https://the-one-api.dev/v2/book/" + id + "/chapter")
         console.log('data: ', data);
         setBooks(prev => {
             const currentBook = prev.findIndex(book => book._id === id);
@@ -70,7 +70,7 @@ export default function LordOfTheRings() {
     return (
         <div>
             <h1>Lord Of The Rings</h1>
-            <button onClick={setFilteredBooksButton}>{`Show ${!finished ? 'un' : ''}finished!`}</button>
+            <button onClick={setFilteredBooksButton}>{"Show " + !finished ? 'un' : '' + "finished!"}</button>
             {/* <h2>The books:</h2> */}
             {!finished ? books.map((b, i) => (
                 <React.Fragment key={i}>
