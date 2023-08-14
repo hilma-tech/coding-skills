@@ -11,9 +11,6 @@ export const Avengers: React.FC<AvengersProps>  = ({ }) => {
     const [message, setMessage] = useState("");
     const [avengersArray, setAvengersArray] = useState<Array<{ name: string, picked: boolean }>>([]);
 
-    useEffect(() => {
-        console.log(avengersArray);
-    }, [avengersArray]);
 
 
     const onClick = (index: number) => {
