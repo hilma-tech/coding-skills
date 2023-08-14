@@ -65,7 +65,7 @@ export const Avengers: React.FC<AvengersProps>  = ({ }) => {
     return (
         <div style={{ width: '40vw', margin: 'auto' }}>
             <h1>The Avengers</h1>
-            <h2>Pick the charechters that dies at the snap!</h2>
+            <h2>Pick the characters that dies at the snap!</h2>
             <button onClick={afterTheSnap}>Check your answers!</button>
             <div className="message">{message}</div>
             <div className="list" style={{ display: 'flex', flexDirection: "column", textAlign: 'left' }}>
